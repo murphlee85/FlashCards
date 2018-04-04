@@ -1,0 +1,21 @@
+class Round
+  attr_reader :deck,
+              :guesses
+
+  def initialize(deck)
+    @deck = deck
+    @guesses = []
+  end
+
+  def current_card
+    deck.cards.first
+  end
+
+  def record_guess(response)
+    Guess.new(response, current_card)
+  end
+
+  def guess_count
+    count += 1
+  end
+end
