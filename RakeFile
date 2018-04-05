@@ -1,0 +1,8 @@
+task default: %w[test]
+
+task :test do
+  ruby "test/card_test.rb"
+  ruby "test/deck_test.rb"
+  ruby "test/guess_test.rb"
+  ruby "test/round_test.rb"
+end

@@ -14,8 +14,4 @@ class Round
   def record_guess(response)
     Guess.new(response, current_card)
   end
-
-  def guess_count
-    count += 1
-  end
 end

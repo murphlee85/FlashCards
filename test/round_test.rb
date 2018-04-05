@@ -53,13 +53,4 @@ class RoundTest < Minitest::Test
     assert_instance_of Guess, guess
     assert_equal "Juneau", guess.response
   end
-
-  def test_that_you_can_record_guess_count
-    card_1 = Card.new("What is the capital of Alaska?", "Juneau")
-    card_2 = Card.new("Approximately how many miles are in one astronomical unit?", "93,000,000")
-    deck = Deck.new([card_1, card_2])
-    round = Round.new(deck)
-
-    assert_equal 1, round.guesses.count
-  end
 end
